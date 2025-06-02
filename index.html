@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яранск - культурная жемчужина</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .ad-banner {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .close-ad {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #999;
+        }
+        
+        .close-ad:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в Яранск!</h1>
+    </header>
+    
+    <nav>
+        <button onclick="location.href='quiz.html'">Пройти тест о Яранске</button>
+    </nav>
+    
+    <main>
+        <section class="video-section">
+            <h2>Видео о Яранске</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="video/1.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section class="grid-section">
+            <h2>Достопримечательности Яранска</h2>
+            <div class="grid-container">
+                 <a href="https://яранский-музей.рф/"><div class="grid-item">
+                   <img src="images/1.jpg" alt="Яранский краеведческий музей">
+                    <h3>Яранский краеведческий музей</h3>
+                    <p>Один из старейших музеев Кировской области с богатой коллекцией экспонатов.</p>
+                </div>
+            </a>
+                <div class="grid-item">
+                    <img src="images/2.jpg" alt="Троицкий собор">
+                    <h3>Троицкий собор</h3>
+                    <p>Памятник архитектуры XIX века, главный православный храм Яранска.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/3.jpg" alt="Дом купца Колчина">
+                    <h3>Дом купца Колчина</h3>
+                    <p>Образец купеческой архитектуры конца XIX века, ныне - административное здание.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/4.jpg" alt="Парк Победы">
+                    <h3>Парк Победы</h3>
+                    <p>Мемориальный комплекс и место отдыха горожан с аллеей ветеранов.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/5.jpg" alt="Яранская ГРЭС">
+                    <h3>Яранская ГРЭС</h3>
+                    <p>Памятник промышленной архитектуры начала XX века.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="images/6.jpg" alt="Городской сад">
+                    <h3>Городской сад</h3>
+                    <p>Старейший парк города, основанный в 1890 году.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="gif-section">
+            <h2>Яранск в движении</h2>
+            <div class="gif-container">
+                <img src="images/1.gif" alt="Анимированный вид культурных мест Яранска">
+                <p>Виды на достопримечательности Яранска</p>
+            </div>
+        </section>
+    </main>
+    
+     <a href="https://tail-wind.ru/?cm_id=118011494_5539352540_16832912874_54259778066_54259778066_none_search_type1_no_desktop_premium_46&utm_source=yandex&utm_medium=cpc&utm_campaign=118011494&utm_content=%7Bgb_id%7D&utm_term=купить%20тур%20по%20России&position=1&position_type=premium&yclid=6578373211684601855" target="_blank"> <div class="ad-banner">
+        <span class="close-ad" onclick="this.parentElement.style.display='none'">×</span>
+        <h3>Специальное предложение!</h3>
+        <p>Туры по Кировской области со скидкой 30%!</p>
+      Узнать подробности
+    </div>
+</a>
+    <footer>
+        <p>© 2025 Все о Яранске</p>
+    </footer>
+</body>
+</html>

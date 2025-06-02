@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Как хорошо вы знаете Яранск?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Тест: Как хорошо вы знаете Яранск?</h1>
+    </header>
+    
+    <nav>
+        <button onclick="location.href='index.html'">Вернуться на главную</button>
+    </nav>
+    
+    <main class="quiz-container">
+        <form id="quiz-form">
+            <div class="question">
+                <h3>1. В каком веке был построен Троицкий собор в Яранске?</h3>
+                <label><input type="radio" name="q1" value="a"> XVIII век</label>
+                <label><input type="radio" name="q1" value="b"> XIX век</label>
+                <label><input type="radio" name="q1" value="c"> XX век</label>
+            </div>
+            
+            <div class="question">
+                <h3>2. Какой музей является одним из старейших в Кировской области?</h3>
+                <label><input type="radio" name="q2" value="a"> Музей современного искусства</label>
+                <label><input type="radio" name="q2" value="b"> Яранский краеведческий музей</label>
+                <label><input type="radio" name="q2" value="c"> Музей истории железной дороги</label>
+            </div>
+            
+            <div class="question">
+                <h3>3. В каком году был основан Городской сад Яранска?</h3>
+                <label><input type="radio" name="q3" value="a"> 1850</label>
+                <label><input type="radio" name="q3" value="b"> 1890</label>
+                <label><input type="radio" name="q3" value="c"> 1920</label>
+            </div>
+            
+            <div class="question">
+                <h3>4. Чем известен дом купца Колчина?</h3>
+                <label><input type="radio" name="q4" value="a"> Это первая школа Яранска</label>
+                <label><input type="radio" name="q4" value="b"> Это образец купеческой архитектуры конца XIX века</label>
+                <label><input type="radio" name="q4" value="c"> Здесь останавливался царь Николай II</label>
+            </div>
+            
+            <div class="question">
+                <h3>5. Какое промышленное сооружение Яранска является памятником архитектуры?</h3>
+                <label><input type="radio" name="q5" value="a"> Яранская ГРЭС</label>
+                <label><input type="radio" name="q5" value="b"> Хлебозавод №1</label>
+                <label><input type="radio" name="q5" value="c"> Текстильная фабрика</label>
+            </div>
+            
+            <button type="button" onclick="checkQuiz()">Проверить ответы</button>
+        </form>
+        
+        <div id="quiz-result" style="display: none;">
+            <h2>Ваш результат: <span id="score">0</span>/5</h2>
+            <p id="result-message"></p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 Тест о Яранске</p>
+    </footer>
+    
+    <script>
+        function checkQuiz() {
+            const answers = {
+                q1: 'b', // Троицкий собор - XIX век
+                q2: 'b', // Яранский краеведческий музей
+                q3: 'b', // 1890
+                q4: 'b', // образец купеческой архитектуры
+                q5: 'a'  // Яранская ГРЭС
+            };
+            
+            let score = 0;
+            
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected && selected.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+            
+            document.getElementById('score').textContent = score;
+            const resultMessage = document.getElementById('result-message');
+            
+            if (score === 5) {
+                resultMessage.textContent = 'Отлично! Вы настоящий знаток Яранска!';
+            } else if (score >= 3) {
+                resultMessage.textContent = 'Хорошо! Вы много знаете о Яранске, но есть куда расти.';
+            } else {
+                resultMessage.textContent = 'Попробуйте еще раз после изучения материалов на главной странице!';
+            }
+            
+            document.getElementById('quiz-result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
